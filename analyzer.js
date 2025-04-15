@@ -1,33 +1,24 @@
 document.getElementById("analyzeBtn").addEventListener("click", function () {
   const text = document.getElementById("textInput").value;
 
-  // Count letters (only a-z and A-Z)
   const letters = (text.match(/[a-zA-Z]/g) || []).length;
 
-  // Count words
   const words = (text.trim().match(/\b\w+\b/g) || []).length;
 
-  // Count spaces
   const spaces = (text.match(/ /g) || []).length;
 
-  // Count newlines
-  const newlines = (text.match(/\n/g) || []).length;
+ const newlines = (text.match(/\n/g) || []).length;
 
-  // Count special characters (excluding letters, digits, and whitespace)
   const specialSymbols = (text.match(/[^\w\s]/g) || []).length;
 
-  // Tokenize all words
   const tokens = text.toLowerCase().match(/\b\w+\b/g) || [];
 
-  // Pronouns to count
   const pronounsList = ["i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them", "my", "your", "his", "its", "our", "their"];
   const pronounCounts = {};
 
-  // Prepositions to count
   const prepositionsList = ["in", "on", "at", "by", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "of", "off", "over", "under"];
   const prepositionCounts = {};
 
-  // Indefinite articles
   const articlesList = ["a", "an"];
   const articleCounts = {};
 
@@ -45,7 +36,6 @@ document.getElementById("analyzeBtn").addEventListener("click", function () {
       }
   });
 
-  // Output Results
   const resultHTML = `
       <div class="result-group">
           <h3>Basic Counts</h3>
@@ -75,7 +65,6 @@ document.getElementById("analyzeBtn").addEventListener("click", function () {
   document.getElementById("results").innerHTML = resultHTML;
 });
 
-// Helper function to display grouped counts
 function formatCounts(counts) {
   if (Object.keys(counts).length === 0) return "None";
   return Object.entries(counts)
