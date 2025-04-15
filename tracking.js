@@ -12,6 +12,7 @@ function getTimestamp() {
   return new Date().toLocaleString();
 }
 
+// View observer (entering/leaving logs)
 function liveViewTracking() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -23,14 +24,12 @@ function liveViewTracking() {
         console.log(`${getTimestamp()}, view, ${type} (leaving view)`);
       }
     });
-  }, {
-    root: null,
-    threshold: 0.25
-  });
+  }, { root: null, threshold: 0.25 });
 
   document.querySelectorAll(".track-view").forEach(el => observer.observe(el));
 }
 
+// Click tracker
 function trackClickEvents() {
   document.addEventListener("click", (event) => {
     const type = getElementType(event.target);
@@ -38,6 +37,7 @@ function trackClickEvents() {
   });
 }
 
+// Text selection tracker
 function trackTextSelection() {
   document.addEventListener("mouseup", () => {
     const selection = window.getSelection().toString().trim();
@@ -47,8 +47,36 @@ function trackTextSelection() {
   });
 }
 
+// Track currently visible element
+function trackCurrentlyViewedSection() {
+  let lastVisible = null;
+
+  window.addEventListener('scroll', () => {
+    let maxVisibleRatio = 0;
+    let currentlyVisible = null;
+
+    document.querySelectorAll('.track-view').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+      const ratio = visibleHeight / rect.height;
+
+      if (ratio > maxVisibleRatio && ratio > 0.3) {
+        maxVisibleRatio = ratio;
+        currentlyVisible = el;
+      }
+    });
+
+    if (currentlyVisible && currentlyVisible !== lastVisible) {
+      const type = getElementType(currentlyVisible);
+      console.log(`${getTimestamp()}, viewing, ${type} (most visible)`);
+      lastVisible = currentlyVisible;
+    }
+  });
+}
+
 window.onload = () => {
   liveViewTracking();
   trackClickEvents();
   trackTextSelection();
+  trackCurrentlyViewedSection();
 };
