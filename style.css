@@ -221,28 +221,54 @@
     gap: 20px;
     margin-top: 20px;
   }
+
 .text-analysis-top {
-  margin: 20px 0 40px;
   text-align: center;
+  margin: 40px 0 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .cloud-button {
   display: inline-block;
-  padding: 14px 30px;
-  background: linear-gradient(145deg, #e0f7ff, #cceeff);
-  border: 2px solid #a0d8ef;
-  border-radius: 50px;
-  font-size: 1.2em;
+  padding: 20px 40px;
+  background-color: #e0f7ff;
   color: #0077b6;
+  font-size: 1.3em;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 60px;
+  position: relative;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.cloud-button::before,
+.cloud-button::after {
+  content: "";
+  position: absolute;
+  background-color: #e0f7ff;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.cloud-button::before {
+  width: 60px;
+  height: 60px;
+  top: -20px;
+  left: 20px;
+}
+
+.cloud-button::after {
+  width: 80px;
+  height: 80px;
+  top: -30px;
+  right: 10px;
 }
 
 .cloud-button:hover {
-  background: linear-gradient(145deg, #cceeff, #a0d8ef);
-  color: #004e7c;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transform: translateY(-3px);
+  background-color: #c2efff;
+  color: #004d6f;
+  transform: scale(1.05);
 }
+
