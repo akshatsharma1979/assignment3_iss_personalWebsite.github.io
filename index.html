@@ -6,81 +6,69 @@
   <title>Akshat Sharma</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="tracking.js" defer></script>
 </head>
-
-
-<script src="tracking.js"></script>
 <body>
-
-  <div class="flower-container">
+  <div class="flower-container track-view" data-track-id="flower-animation">
     <div class="flower-petal"></div>
     <div class="flower-petal"></div>
     <div class="flower-petal"></div>
     <div class="flower-petal"></div>
   </div>
-
   <div class="main-container">
-
-    <section class="profile">
-      <img src="profile.jpg" alt="Akshat Sharma" class="profile-pic" />
-      <h1>Akshat Sharma🧒🏽</h1>
-      <p class="subheading">First Year Undergrad, IIIT Hyderabad</p>
-      <p class="location">Kota, Rajasthan</p>
+    <section class="profile track-view" data-track-id="profile-section">
+      <img src="profile.jpg" alt="Akshat Sharma" class="profile-pic track-view" data-track-id="profile-picture" />
+      <h1 class="track-view" data-track-id="name-heading">Akshat Sharma🧒🏽</h1>
+      <p class="subheading track-view" data-track-id="education-subheading">First Year Undergrad, IIIT Hyderabad</p>
+      <p class="location track-view" data-track-id="location-info">Kota, Rajasthan</p>
     </section>
-    <section class="text-analysis-top">
-  <a href="text_analysis.html" class="cloud-button">Text Analyzer</a>
-</section>
-
-    <section class="section about">
-      <h2>About Me</h2>
-      <p>I am Akshat Sharma, currently pursuing a dual degree in B.Tech (Computer Science) and MS in Computing and Human Sciences at IIIT Hyderabad. Passionate about technology, design, and interdisciplinary learning. I am constantly exploring ways to integrate technology with human-centered research.</p>
+    <section class="text-analysis-top track-view" data-track-id="text-analyzer-section">
+      <a href="text_analysis.html" class="cloud-button track-view" data-track-id="text-analyzer-button">Text Analyzer</a>
     </section>
-
+    <section class="section about track-view" data-track-id="about-section">
+      <h2 class="track-view" data-track-id="about-heading">About Me</h2>
+      <p class="track-view" data-track-id="about-content">I am Akshat Sharma, currently pursuing a dual degree in B.Tech (Computer Science) and MS in Computing and Human Sciences at IIIT Hyderabad. Passionate about technology, design, and interdisciplinary learning. I am constantly exploring ways to integrate technology with human-centered research.</p>
+    </section>
     
-    <section class="section education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>IIIT Hyderabad</strong> (2024-Present): B.Tech in Computer Science & MS in Computing and Human Sciences</li>
-        <li><strong>Allen Career Institute, Kota</strong> (2022-2024): JEE Preparation</li>
-        <li><strong>St. Paul’s Sr. Sec. School, Kota</strong> (Up to 10th Grade): CBSE Curriculum</li>
+    <section class="section education track-view" data-track-id="education-section">
+      <h2 class="track-view" data-track-id="education-heading">Education</h2>
+      <ul class="track-view" data-track-id="education-list">
+        <li class="track-view" data-track-id="education-iiit"><strong>IIIT Hyderabad</strong> (2024-Present): B.Tech in Computer Science & MS in Computing and Human Sciences</li>
+        <li class="track-view" data-track-id="education-allen"><strong>Allen Career Institute, Kota</strong> (2022-2024): JEE Preparation</li>
+        <li class="track-view" data-track-id="education-stpauls"><strong>St. Paul's Sr. Sec. School, Kota</strong> (Up to 10th Grade): CBSE Curriculum</li>
       </ul>
     </section>
-
     
-    <section class="section skills">
-      <h2>Skills</h2>
-      <p>Programming Languages: C, C++, Python, Bash</p>
-      <p>Databases: MySQL, NoSQL</p>
-      <p>Frameworks: FastAPI</p>
-      <p>Currently Learning: Data Structures and Algorithms</p>
+    <section class="section skills track-view" data-track-id="skills-section">
+      <h2 class="track-view" data-track-id="skills-heading">Skills</h2>
+      <p class="track-view" data-track-id="skills-programming">Programming Languages: C, C++, Python, Bash</p>
+      <p class="track-view" data-track-id="skills-databases">Databases: MySQL, NoSQL</p>
+      <p class="track-view" data-track-id="skills-frameworks">Frameworks: FastAPI</p>
+      <p class="track-view" data-track-id="skills-learning">Currently Learning: Data Structures and Algorithms</p>
     </section>
-
     
-    <section class="section interests">
-      <h2>Personal Interests</h2>
-      <p>I enjoy playing badminton, basketball, and chess. I also have a keen interest in design and love creating clean, intuitive user interfaces.</p>
+    <section class="section interests track-view" data-track-id="interests-section">
+      <h2 class="track-view" data-track-id="interests-heading">Personal Interests</h2>
+      <p class="track-view" data-track-id="interests-content">I enjoy playing badminton, basketball, and chess. I also have a keen interest in design and love creating clean, intuitive user interfaces.</p>
     </section>
-
     
-    <section class="section resume">
-      <h2>CV</h2>
-      <a href="akshat_resume.pdf" target="_blank" class="button1">Download My CV</a>
+    <section class="section resume track-view" data-track-id="resume-section">
+      <h2 class="track-view" data-track-id="cv-heading">CV</h2>
+      <a href="akshat_resume.pdf" target="_blank" class="button1 track-view" data-track-id="download-cv-button">Download My CV</a>
     </section>
-
-        <section class="section gallery">
-      <h2>Local Gallery</h2>
-      <div class="gallery-images">
-        <img src="kota1.jpg" alt="Kota" class="gallery-img" />
-        <img src="kota2.jpeg" alt="Kota" class="gallery-img" />
+    
+    <section class="section gallery track-view" data-track-id="gallery-section">
+      <h2 class="track-view" data-track-id="gallery-heading">Local Gallery</h2>
+      <div class="gallery-images track-view" data-track-id="gallery-container">
+        <img src="kota1.jpg" alt="Kota" class="gallery-img track-view" data-track-id="kota-image-1" />
+        <img src="kota2.jpeg" alt="Kota" class="gallery-img track-view" data-track-id="kota-image-2" />
       </div>
     </section>
-
-
-        <footer class="footer">
-      <p>© 2025 Akshat Sharma <3</p>
+    
+    <footer class="footer track-view" data-track-id="footer">
+      <p class="track-view" data-track-id="copyright">© 2025 Akshat Sharma <3</p>
     </footer>
     
   </div>
-
 </body>
 </html>
