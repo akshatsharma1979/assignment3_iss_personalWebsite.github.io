@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Analyzer</title>
+  <link rel="stylesheet" href="text_analysis.css">
+  <script defer src="analyzer.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Text Analyzer Tool</h1>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="index.html" style="
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease;
+      " onmouseover="this.style.backgroundColor='#0056b3'"
+         onmouseout="this.style.backgroundColor='#007bff'">
+        ← Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <textarea id="textInput" placeholder="Paste your text here..."></textarea>
+    <button id="analyzeBtn">Analyze</button>
+
+    <div id="results" class="results"></div>
+  </main>
+</body>
+</html>
